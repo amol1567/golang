@@ -1,0 +1,51 @@
+*****************************************
+Go Language --> Golang
+*****************************************
+1. Basic Programming
+2. JSON
+3. YAML
+4. ConCurrency Programming
+5. GRPC Protocol
+6. Gin-gonic Framework
+7. Unit testing
+8. K8s Proramming skills
+9.Threads and Daemon Concepts
+-----------------------------------------
+Creators: 
+   By Google team- Robert Griesemar, Rob Pike, Ken Thompson
+   (From Software Industry)
+ 
+Why Golang:
+Python, Java, C/C++ - Each of this language within itself is very powerful, however 
+the Go designer study & the recognize some limitaions that might not to be able to 
+fix in the history of the design of existing languages.
+Python - Easy to use(but slow) but it is interpreter language so it can be little bit 
+         difficult to run an application based on python.
+Java - Java is very quick but its type system has become increasingly complex over time.
+C/C++ - It is also very quick, however it suffers from complex type system and also 
+        complie times is slow.
+
+Go (golang):
+     - Go programs are compiled to native machine code, which makes Go much faster than the 
+       majority of other interpreted languages.
+     - Strong(type of variable can not changed over time) and statically(type of variable 
+       is defined at compile time) typed language.
+     - Excellent community(Strong support for community that focusing on it).
+     - Key features (Simplicity, Fast compile times, Garbage collection(go runtime is going 
+       to manage memory)
+     - Built-in concurrency
+     - Compile to standalone binaries(when you complie your Go application everything is 
+       going to be binary in that single binary that realted to the Go application itself.
+       Go runtime is binary living their, any libaries that you are depending on they are 
+       going to be compiles in their so you not have worry about reaching any exeternal 
+       libaries and disallows to make your application works. Giving version management at 
+       runtime becomes trivial.
+----------------------------------------------------
+Installation on RHEL8
+rm -rf /usr/local/go
+yum module list go-toolset
+yum module -y install go-toolset
+rpm -qi go-toolset
+vim ~/.bashrc -> export PATH=$PATH:/golib/bin/
+source ~/.bashrc
+

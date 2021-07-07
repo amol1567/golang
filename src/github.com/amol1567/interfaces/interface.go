@@ -2,6 +2,7 @@
 - defines the set of opeations/methods while struct defines memory layout of a type
 - store any value inside empty interface
 - end with __+er & method name wihout er.
+- io.Writer, io.Reader, interface{}
 */
 package main
 
@@ -19,8 +20,15 @@ func main() {
 	e = "Hello, World!"
 	fmt.Printf("e's value is %v, type: %T\n", e, e)
 
-	type Worker interface {
-		Work()
+	type Writer interface {
+		Write([]byte)(int, error)
+	}
+	type Closer interface {
+		Close() error
+	}
+	type WriterCloser interface{
+		Writer 
+		Closer
 	}
 
 	type (
@@ -39,7 +47,7 @@ func main() {
 	)
 //method
 type Currency float64
-func (c Currency) String() string {
+func (c Currency) String() string{
 	return fmt.Sprintf("$%.2f", float64(c))
 }
 }
